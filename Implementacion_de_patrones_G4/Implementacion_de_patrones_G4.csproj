@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builder\Automovil.cs" />
+    <Compile Include="Builder\AutomovilBuilder.cs" />
+    <Compile Include="Builder\MitsubishiLancerBuilder.cs" />
+    <Compile Include="Builder\ToyotaCorollaBuilder.cs" />
+    <Compile Include="Builder\ToyotaHiluxBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
