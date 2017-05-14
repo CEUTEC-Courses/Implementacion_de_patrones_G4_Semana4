@@ -10,6 +10,7 @@ namespace Implementacion_de_patrones_G4
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
