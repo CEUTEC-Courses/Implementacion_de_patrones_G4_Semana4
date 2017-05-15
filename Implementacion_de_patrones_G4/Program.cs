@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Implementacion_de_patrones_G4.Builder;
+using Implementacion_de_patrones_G4.Prototype;
 
 namespace Implementacion_de_patrones_G4
 {
@@ -36,6 +37,24 @@ namespace Implementacion_de_patrones_G4
             MitsubishiLancer1.ImprimirResultado();
 
             Console.WriteLine("\n--- Fin de Builder ---\n");
+
+            /* Fin de Builder */
+
+            /* Pruebas Prototype */
+
+            Console.WriteLine("--- Pruebas Prototype ---\n");
+
+            Color rojo = new Color("Rojo");
+            Color azul = new Color("Azul");
+            Color verde = new Color("Verde");
+
+            Color copiaVerde = verde.Clone() as Color;
+            Color copiaAzul = azul.Clone() as Color;
+            Color copiaRojo = rojo.Clone() as Color;
+
+            Console.WriteLine("\n--- Fin de Prototype ---\n");
+
+            /* Fin de Prototype  */
 
             Console.ReadLine();
         }
