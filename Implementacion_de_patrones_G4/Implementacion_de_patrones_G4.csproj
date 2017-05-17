@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prototype\Color.cs" />
     <Compile Include="Prototype\PrototipoColor.cs" />
+    <Compile Include="Singleton\SingletonPatron.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
