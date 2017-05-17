@@ -10,7 +10,7 @@ namespace Implementacion_de_patrones_G4.Singleton
    class SingletonPatron
     {
         // Declaramos un atributo del mismo tipo de la clase con carácter estático
-        public static SingletonPatron _instancia = null;
+        private static SingletonPatron _instancia = null;
 
         public string Nombre { get; set; }
         public DateTime HoraArranque { get; set; }

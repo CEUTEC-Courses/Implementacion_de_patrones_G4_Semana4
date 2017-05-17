@@ -61,7 +61,7 @@ namespace Implementacion_de_patrones_G4
             /*Prueba Singleton*/
             Console.WriteLine("--- Pruebas Singleton ---\n");
             
-            SingletonPatron s = new SingletonPatron();
+            SingletonPatron s = SingletonPatron.Instance;
             Console.WriteLine(string.Format("Instancia {0} creada a las {1}",
             s.Nombre, s.HoraArranque.ToLongTimeString()));
 
@@ -71,7 +71,7 @@ namespace Implementacion_de_patrones_G4
             Thread.Sleep(5000);
 
             // Intentamos instanciar un segundo Singleton
-            SingletonPatron s2 = new SingletonPatron();
+            SingletonPatron s2 = SingletonPatron.Instance;
 
             // Comprobamos que ambos objetos son referencias a la misma instancia, que es única
             Console.WriteLine("\n");
