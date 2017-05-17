@@ -140,31 +140,28 @@ namespace Implementacion_de_patrones_G4
             Console.WriteLine("--- Fin Factory Method ---\n");
             /*Fin Prueba de Factory Method */
 
-            Console.ReadLine();
-
-
             //Prueba Abstract Factory
 
             Console.WriteLine("--- Inicio AbstractFactory ---\n");
 
             AbstractFactoryPatron.PhoneTypeChecker checker = new AbstractFactoryPatron.PhoneTypeChecker(AbstractFactoryPatron.MANUFACTURERS.SAMSUNG);
-            
-
-            PhoneTypeChecker checker = new PhoneTypeChecker(MANUFACTURERS.SAMSUNG);
 
             checker.CheckProducts();
 
             Console.ReadLine();
 
-            checker = new PhoneTypeChecker(MANUFACTURERS.HTC);
+            checker = new AbstractFactoryPatron.PhoneTypeChecker(AbstractFactoryPatron.MANUFACTURERS.HTC);
 
             checker.CheckProducts();
             Console.ReadLine();
 
-            checker = new PhoneTypeChecker(MANUFACTURERS.IPHONE);
+            checker = new AbstractFactoryPatron.PhoneTypeChecker(AbstractFactoryPatron.MANUFACTURERS.IPHONE);
 
             checker.CheckProducts();
             Console.Read();
+
+            Console.ReadLine();
+
         }
     }
 }

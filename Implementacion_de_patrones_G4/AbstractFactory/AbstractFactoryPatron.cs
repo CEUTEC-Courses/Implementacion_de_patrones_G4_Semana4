@@ -133,7 +133,7 @@ namespace Implementacion_de_patrones_G4.AbstractFactory
             IPhoneFactory factory;
             MANUFACTURERS manu;
 
-            private PhoneTypeChecker(MANUFACTURERS m)
+            public PhoneTypeChecker(MANUFACTURERS m)
             {
                 manu = m;
             }
