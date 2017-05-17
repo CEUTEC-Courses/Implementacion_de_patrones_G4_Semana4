@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\AbstractFactoryPatron.cs" />
     <Compile Include="Builder\Automovil.cs" />
     <Compile Include="Builder\AutomovilBuilder.cs" />
     <Compile Include="Builder\MitsubishiLancerBuilder.cs" />
