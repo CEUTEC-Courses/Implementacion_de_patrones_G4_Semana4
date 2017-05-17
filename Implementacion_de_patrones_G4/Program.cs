@@ -7,6 +7,8 @@ using Implementacion_de_patrones_G4.Builder;
 using Implementacion_de_patrones_G4.Prototype;
 using System.Threading;
 using Implementacion_de_patrones_G4.Singleton;
+using Implementacion_de_patrones_G4.Interface;
+using Implementacion_de_patrones_G4.FactoryMethod;
 
 namespace Implementacion_de_patrones_G4
 {
@@ -81,6 +83,63 @@ namespace Implementacion_de_patrones_G4
             Console.WriteLine("\n--- Fin de Singleton ---\n");
 
             /* Fin de Singleton  */
+
+
+            /*Prueba de Interface */
+          
+            //Se crea una lista de tipo Alumno que se  utilizara en el metodo Mostrar Alumnos
+            var ListaAlumnos = new List<Alumno>
+            {
+              new Alumno {Nombre="Karen", Curso="3BTC", Notas=new List<int> {85,92,75,88}},
+              new Alumno {Nombre="Luis",Curso="3BTC",  Notas=new List<int> {92,95,81,98} },
+              new Alumno {Nombre="Katherin",Curso="3BTC", Notas=new List<int> {55,50,51,58} },
+              new Alumno {Nombre="Merilyn", Curso="3BTC", Notas=new List<int> {100,95,98,100} },
+            };
+
+            //se crea una instancia de la Clase Alumno
+            Alumno ObjetoAlumno = new Alumno();
+
+            //Comprobamos que se utilizan  las clases que implementan la interface,
+            //ya que el Metodo MostrarAlumnos pide comoparametro un objeto de tipo de la interface
+
+            Console.WriteLine("--- Pruebas Interface ---\n");
+
+            var AlumnosExcelentes = new ClasificacionEstudianteExcelentes();
+            ObjetoAlumno.MostrarAlumnos(AlumnosExcelentes, ListaAlumnos);
+
+            var AlumnosMuyBuenos = new ClasificacionEstudiantesMuyBuenos();
+            ObjetoAlumno.MostrarAlumnos(AlumnosMuyBuenos, ListaAlumnos);
+
+            var AlumnosReprobados = new ClasificacionEstudiantesReprobados();
+            ObjetoAlumno.MostrarAlumnos(AlumnosReprobados, ListaAlumnos);
+            Console.WriteLine("--- Fin Interface ---\n");
+
+            /*Fin de Prueba Interface */
+
+            /*Prueba de Factory Method */
+            Console.WriteLine("--- Prueba Factory Method ---\n");
+            //se crea una instancia de la Clase ProspectoDeVentas
+            ProspectoDeVentas prospectoVenta = new ProspectoDeVentas();
+
+            prospectoVenta.Nombre = "Evelin Paz";
+            prospectoVenta.Telefono = "2556-5471";
+            prospectoVenta.Presupuesto = 15000.0;
+
+            // Estado interno de la tienda
+            ProspectoMemoria memoria = new ProspectoMemoria();
+            memoria.Recuerdo = prospectoVenta.GuardarRecuerdo();
+
+            // Continuar cambiando origen
+            prospectoVenta.Nombre = "Jackelyn Pinto";
+            prospectoVenta.Telefono = "2510-5210";
+            prospectoVenta.Presupuesto = 25000.00;
+
+            // Restaurar estado guardado
+            prospectoVenta.RestaurarRecuerdo(memoria.Recuerdo);
+            Console.WriteLine("--- Fin Factory Method ---\n");
+            /*Fin Prueba de Factory Method */
+
+
 
             Console.ReadLine();
         }

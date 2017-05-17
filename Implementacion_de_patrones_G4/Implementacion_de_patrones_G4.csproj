@@ -48,8 +48,16 @@
     <Compile Include="Builder\MitsubishiLancerBuilder.cs" />
     <Compile Include="Builder\ToyotaCorollaBuilder.cs" />
     <Compile Include="Builder\ToyotaHiluxBuilder.cs" />
+    <Compile Include="FactoryMethod\Recuerdo.cs" />
+    <Compile Include="Interface\Alumno.cs" />
+    <Compile Include="Interface\ClasificacionEstudianteExcelentes.cs" />
+    <Compile Include="Interface\ClasificacionEstudiantesMuyBuenos.cs" />
+    <Compile Include="Interface\ClasificacionEstudiantesReprobados.cs" />
+    <Compile Include="Interface\IClasificarEstudiantes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FactoryMethod\ProspectoDeVentas.cs" />
+    <Compile Include="FactoryMethod\ProspectoMemoria.cs" />
     <Compile Include="Prototype\Color.cs" />
     <Compile Include="Prototype\PrototipoColor.cs" />
     <Compile Include="Singleton\SingletonPatron.cs" />
